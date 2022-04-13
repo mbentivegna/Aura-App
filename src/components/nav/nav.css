@@ -1,0 +1,26 @@
+.title {
+    color: rgb(20, 20, 98);
+    position: fixed;
+    left: 100px;
+}
+
+.links {
+    width: 500px;
+    float: right;
+
+}
+
+.link {
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+.overall {
+    background-color: rgb(228, 228, 220);
+}
+
