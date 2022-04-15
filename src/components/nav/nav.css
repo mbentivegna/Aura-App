@@ -1,11 +1,11 @@
 .title {
-    color: rgb(20, 20, 98);
+    color: #EEE2DC;
     position: fixed;
     left: 100px;
 }
 
 .links {
-    width: 500px;
+    width: 600px;
     float: right;
 
 }
@@ -15,12 +15,14 @@
     display: inline-block;
     margin: 20px;
     margin-top: 30px;
+    margin-right: 40px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
+
 }
 
 
 .overall {
-    background-color: rgb(228, 228, 220);
+    background-color: #123C69;
 }
 

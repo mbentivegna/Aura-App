@@ -49,12 +49,12 @@ function Return() {
 
   return (
     <div className = "total">
-        <div className = "register">
-            <h2 className = "reg-title">Return</h2>
+        <div className = "return">
+            <h2 className = "ret-title">Return</h2>
             <div>
-                <h3>Tracker #:</h3>
-                <Select options = {numList} className="select" onChange = {(e) => setFormData(e.label)}></Select>
-                <button onClick = {submit} className = "submit-button" disabled = {buttonDisabled}>Submit</button>
+                <h3 className = "sub-title-ret">Tracker #:</h3>
+                <Select options = {numList} className="select-ret" onChange = {(e) => setFormData(e.label)}></Select>
+                <button onClick = {submit} className = "submit-button-ret" disabled = {buttonDisabled}>Submit</button>
             </div>
             
         </div>

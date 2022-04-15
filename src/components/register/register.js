@@ -3,8 +3,9 @@ import { useState } from 'react';
 import Select from 'react-select';
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-
 toast.configure()
+
+
 function Register() {
 
     const [formData, setFormData] = useState({
@@ -71,13 +72,13 @@ function Register() {
         <div className = "register">
             <h2 className = "reg-title">Registration</h2>
             <div>
-                <h3>Name:</h3>
+                <h3 className = "sub-title">Name:</h3>
                 <input type = "text" value = {formData.name} onChange = {(e) => setFormData({...formData, name: e.target.value})}  className="inputBoxes" />
 
-                <h3>Visitor Type:</h3>
+                <h3 className = "sub-title">Visitor Type:</h3>
                 <Select options = {list} className="select" onChange = {(e) => setFormData({...formData, type: e.label})} defaultValue={"None"}></Select>
 
-                <h3>Tracker #:</h3>
+                <h3 className = "sub-title">Tracker #:</h3>
                 <Select options = {numList} className="select" onChange = {(e) => setFormData({...formData, number: e.label})} defaultValue={"None"}></Select>
                 <button onClick = {submit} className = "submit-button" disabled= {buttonDisabled}>Submit</button>
             </div>

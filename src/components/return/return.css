@@ -1,41 +1,69 @@
-.register {
+.return {
     margin: auto;
     margin-top: 50px;
-    width: 50%;
-    min-width: 400px;
-    border: 4px solid rgb(20, 20, 98);
-    border-radius: 15px;
+    width: 600px;
+    border-radius: 20px;
+    background-color: #EEE2DC;
 }
 
-.reg-title{
-    color: rgb(20, 20, 98);
+.ret-title{
+    color: #EEE2DC;
+    padding: 20px;
+    background-color: #AC3B61;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
-.inputBoxes {
+.inputBoxes-ret {
     width: 280px;
     padding: 10px;
     font-size: 15px;
     border-radius: 4px;
-    border: 2px solid black;
+    border: 2px solid #AC3B61;
     text-align: center;
+    font-weight: bold;
 
 }
 
-h3 {
-    color: rgb(20, 20, 98);
+.inputBoxes-ret:focus { 
+    outline: none !important;
 }
 
-.select {
+.sub-title-ret {
+    color: #AC3B61;
     margin: auto;
     width: 300px;
-    border: 2px solid black;
-    border-radius: 4px;
+    padding: 10px;
+    padding-top: 20px;
+    
 }
 
-.submit-button {
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    border: solid 2px;
+
+.select-ret {
+    margin: auto;
+    width: 300px;
+    border: 2px solid #AC3B61;
     border-radius: 4px;
+    font-weight: bold;
+    color: darkslategray;
+}
+
+.select-ret:focus { 
+    outline: none !important;
+}
+
+.submit-button-ret {
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #AC3B61;
+    font-weight: bold;
+    color: #EEE2DC;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+.submit-button-ret:hover {
+    cursor: pointer;
 }
