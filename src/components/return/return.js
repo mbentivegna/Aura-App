@@ -1,28 +1,35 @@
 import './return.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Select from 'react-select';
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import {getOccupiedTags} from '../APIUtils'
 
 toast.configure()
 function Return() {
 
-    const [formData, setFormData] = useState(-1)
+    const [formData, setFormData] = useState("")
 
     const [buttonDisabled, setButtonDisabled] = useState(false);
   
+    const [occupied, setOccupied] = useState([]);
+
+    useEffect(() =>{
+        getOccupiedTags().then((data) => {setOccupied(data)})
+        return occupied
+    }, [])
+
     //*****Get Request for Number Options*****
-    var numberOptions = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
     var numList= [];
-    numberOptions.forEach(function(element) {
-        numList.push({ label:element, value: element })
+    occupied.forEach(function(element) {
+        numList.push({ label:element.boardName, value: element.boardName})
     });
 
 
 
     const submit = async() => {
         
-        if (formData === -1)
+        if (formData === "")
         {
             toast.warn("Please Enter a Tracker #", {position: toast.POSITION.TOP_CENTER})
         }
@@ -31,6 +38,11 @@ function Return() {
             toast.success("Successfully Returned Device! The Page will Reset Shortly.", {position: toast.POSITION.TOP_CENTER})
             console.log(formData)
             setButtonDisabled(true)
+
+            fetch('http://localhost:8080/api/board/unassign?boardName=' + formData, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+            })
             //******Make post request here******
             await sleep(6);
             window.location.reload(false);
