@@ -4,6 +4,7 @@ import Nav from "./components/nav/nav";
 import Register from "./components/register/register";
 import Home from "./components/home/home";
 import Return from "./components/return/return"
+import Export from "./components/export/export"
 
 function App() 
 {
@@ -14,6 +15,7 @@ function App()
         <Route path="" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/return" element={<Return />} />
+        <Route path="/export" element={<Export />} />
     </Routes>
     </div>
   );
