@@ -3,7 +3,8 @@ import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { useState, useEffect} from 'react'
-import { getVisitors} from "../APIUtils"
+import { getVisitors, getCSV} from "../APIUtils"
+import Moment from "moment"
 
 function Export() {
 
@@ -35,6 +36,7 @@ function Export() {
         if(apiState.startString != '' && apiState.endString != '')
         {
             //Make post request for csv here
+            console.log(getCSV(apiState.startString, apiState.endString))
             console.log(apiState)
         }
         return visitors
@@ -43,10 +45,10 @@ function Export() {
       const submit = async() =>
       {
         if(state[0].endDate != null) {
-            apiSetState({...apiState, startString: state[0].startDate.toLocaleDateString('en-US'), endString: state[0].endDate.toLocaleDateString('en-US')})
+            apiSetState({...apiState, startString: Moment(state[0].startDate).format('YYYY-MM-DD'), endString: Moment(state[0].endDate).format('YYYY-MM-DD')})
         }
         else {
-            apiSetState({...apiState, startString: state[0].startDate.toLocaleDateString('en-US'), endString: state[0].startDate.toLocaleDateString('en-US')})
+            apiSetState({...apiState, startString: Moment(state[0].startDate).format('YYYY-MM-DD'), endString: Moment(state[0].startDate).format('YYYY-MM-DD')})
         }
       }
 

@@ -24,3 +24,11 @@ export async function getVisitors() {
 
     return data
 }
+
+export async function getCSV(string1, string2) {
+    const apiURL = "http://localhost:8080/api/visitor/csv?from=" + string1 + "&to=" + string2
+
+    const res = await fetch(apiURL);
+
+    return res
+}
