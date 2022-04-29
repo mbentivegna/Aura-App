@@ -3,7 +3,7 @@ import { DateRange } from "react-date-range";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { useState, useEffect} from 'react'
-import { getVisitors, getCSV} from "../APIUtils"
+import { getVisitors, getCSV, fetchCSV} from "../APIUtils"
 import Moment from "moment"
 
 function Export() {
@@ -36,7 +36,7 @@ function Export() {
         if(apiState.startString != '' && apiState.endString != '')
         {
             //Make post request for csv here
-            console.log(getCSV(apiState.startString, apiState.endString))
+            console.log(fetchCSV(apiState.startString, apiState.endString))
             console.log(apiState)
         }
         return visitors
