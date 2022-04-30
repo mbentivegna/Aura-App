@@ -80,8 +80,17 @@ function Register() {
         })
     }
 
+    const customStyles = {
+        control: base => ({
+          ...base,
+          height: 50,
+          minHeight: 50,
+          
+        })
+      };
+
   return (
-    <div className = "total">
+    <div className = "total-reg">
         <div className = "register">
             <h2 className = "reg-title">Registration</h2>
             <div>
@@ -92,10 +101,10 @@ function Register() {
                 <input type = "text" value = {formData.email} onChange = {(e) => setFormData({...formData, email: e.target.value})}  className="inputBoxes" />
 
                 <h3 className = "sub-title">Visitor Type:</h3>
-                <Select options = {list} className="select" onChange = {(e) => setFormData({...formData, visitorType: e.label})} defaultValue={"None"}></Select>
+                <Select styles={customStyles} options = {list} className="select" onChange = {(e) => setFormData({...formData, visitorType: e.label})} defaultValue={"None"}></Select>
 
                 <h3 className = "sub-title">Tracker #:</h3>
-                <Select options = {numListFunc()} className="select" onChange = {(e) => setFormData({...formData, boardName: e.label})} defaultValue={"None"}></Select>
+                <Select styles={customStyles} options = {numListFunc()} className="select" onChange = {(e) => setFormData({...formData, boardName: e.label})} defaultValue={"None"}></Select>
                 <button onClick = {submit} className = "submit-button" disabled= {buttonDisabled}>Submit</button>
             </div>
             

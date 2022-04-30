@@ -58,14 +58,23 @@ function Return() {
         })
     }
 
+    const customStyles = {
+        control: base => ({
+          ...base,
+          height: 50,
+          minHeight: 50,
+          
+        })
+      };
+
 
   return (
-    <div className = "total">
+    <div className = "total-ret">
         <div className = "return">
             <h2 className = "ret-title">Return</h2>
             <div>
                 <h3 className = "sub-title-ret">Tracker #:</h3>
-                <Select options = {numList} className="select-ret" onChange = {(e) => setFormData(e.label)}></Select>
+                <Select styles={customStyles} options = {numList} className="select-ret" onChange = {(e) => setFormData(e.label)}></Select>
                 <button onClick = {submit} className = "submit-button-ret" disabled = {buttonDisabled}>Submit</button>
             </div>
             

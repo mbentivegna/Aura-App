@@ -1,6 +1,6 @@
 .title {
     color: #EEE2DC;
-    position: fixed;
+    position: absolute;
     left: 100px;
 }
 
@@ -13,7 +13,6 @@
 .link {
     text-decoration: none;
     display: inline-block;
-    margin: 20px;
     margin-top: 30px;
     margin-right: 40px;
     font-weight: bold;
@@ -24,5 +23,6 @@
 
 .overall {
     background-color: #123C69;
+    height: 90px;
 }
 

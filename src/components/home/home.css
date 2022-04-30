@@ -1,33 +1,41 @@
 .summary {
-    margin-top: 50px;
-    color: rgb(20, 20, 98);
+    margin: auto;
+    width: 1000px;
+    background-color: rgb(233, 233, 233);
+    padding-top: 0px;
+    box-shadow: 3px 3px 3px #6e6e77;;
 }
 
 .welcome {
-    background-color: #AC3B61;
-    color: #EEE2DC;
-    padding: 20px;
-    width: 940px;
-    margin: auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    color: #123C69;
+    padding-top: 30px;
+    margin-top: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
 }
 
 .aboutUs {
-    width: 900px;
-    color: #AC3B61;
-    padding-left: 40px;
-    padding-right: 40px;
+    color: #800830;
+    padding-left: 50px;
+    padding-right: 50px;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     margin: auto;
-    background-color: #EEE2DC;
+    background-color: rgb(233, 233, 233);
 }
 
 p {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     text-align: left;
+    line-height: 24pt;
+}
+
+.total-home {
+    margin-top: 0px;
+    background: linear-gradient(#9fd1e9, #447bc4);
+    padding: 60px;
+    min-height: 900px;
 }

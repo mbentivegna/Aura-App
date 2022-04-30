@@ -1,27 +1,26 @@
 .return {
     margin: auto;
-    margin-top: 50px;
     width: 600px;
-    border-radius: 20px;
-    background-color: #EEE2DC;
+    background-color: rgb(233, 233, 233);
+    padding-top: 0px;
+    box-shadow: 3px 3px 3px 3px #6e6e77;;
 }
 
 .ret-title{
-    color: #EEE2DC;
-    padding: 20px;
-    background-color: #AC3B61;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    color: #123C69;
+    padding-top: 30px;
+    margin-top: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
 }
 
 .inputBoxes-ret {
-    width: 280px;
-    padding: 10px;
+    width: 400px;
+    padding: 15px;
     font-size: 15px;
-    border-radius: 4px;
-    border: 2px solid #AC3B61;
     text-align: center;
     font-weight: bold;
+    border: 2px solid rgb(233, 233, 233)
 
 }
 
@@ -30,20 +29,20 @@
 }
 
 .sub-title-ret {
-    color: #AC3B61;
     margin: auto;
-    width: 300px;
+    width: 400px;
     padding: 10px;
-    padding-top: 20px;
+    padding-top: 30px;
+    text-align: left;
+    color: #AC3B61;
     
 }
 
 
 .select-ret {
     margin: auto;
-    width: 300px;
-    border: 2px solid #AC3B61;
-    border-radius: 4px;
+    width: 430px;
+    border: 2px solid rgb(233, 233, 233);
     font-weight: bold;
     color: darkslategray;
 }
@@ -66,4 +65,11 @@
 
 .submit-button-ret:hover {
     cursor: pointer;
+}
+
+.total-ret{
+    margin-top: 0px;
+    background: linear-gradient(#9fd1e9, #447bc4);
+    padding: 60px;
+    min-height: 900px;
 }

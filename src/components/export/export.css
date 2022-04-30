@@ -2,6 +2,19 @@
     display: grid; 
     grid-template-columns: 40% 50%; 
     grid-gap: 40px; 
+    background: linear-gradient(#9fd1e9, #447bc4);
+    padding: 60px;
+    min-height: 900px;
+}
+
+.date-picker {
+    background-color: rgb(233, 233, 233);
+    padding-top: 0px;
+    box-shadow: 3px 3px 3px 3px #6e6e77;
+    height: 520px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .grid-w-button {
@@ -14,75 +27,78 @@
 }
 
 .title-date {
-    margin-top: 100px;
-    color: #3f72fc;
+    color: #123C69;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
 }
 
-.sub-button-visitors {
-    padding: 15px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background-color: #3f72fc;
-    font-weight: bold;
-    color: #EEE2DC;
-    border-radius: 10px;
-    border: none;
-    font-size: 14px;
-}
 
-.sub-button-visitors:hover {
-    cursor: pointer;
-    background-color: blue;
-}
 
 .list-visitors {
-    margin: 30px;
+    margin-left: auto;
+    width: 800px;
+    background-color: rgb(233, 233, 233);
+    padding-top: 0px;
+    box-shadow: 3px 3px 3px 3px #6e6e77;;
+    height: 700px;
+    overflow: scroll;
 }
 
 .overall-card {
-    border: 2px solid #3f72fc;
-    margin-bottom: 20px;
-    background-color: #3f72fc;
+    border: 2px solid #123C69;
+    background-color: #123C69;
+    margin-bottom: 10px;
     border-radius: 20px;
+    height: 100px;
 }
 
 .username-card {
     font-weight: bold;
     font-size: 24px;
-    margin-top: 40px;
-    color: white;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    color: rgb(233, 233, 233);
 }
 
 .visitortype-card {
+    margin-top: 0px;
     margin-bottom: 40px;
-    color: white;
+    color: #f4c430;
+    font-weight: bold;
+
 }
 
 .export-vis-title {
-    color: #3f72fc;
-    margin: auto;
+    color: #123C69;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
 }
 
 .export-all-button{
     padding: 15px;
-    height: 50px;
-    background-color: #3f72fc;
+    background-color: #AC3B61;
     font-weight: bold;
     color: #EEE2DC;
     border-radius: 10px;
     border: none;
     font-size: 14px;
     margin: auto;
+    margin-top: 20px;
 }
 
 .export-all-button:hover{
     cursor: pointer;
-    background-color: blue;
 }
 
 .list-styling {
     width: 80%;
     margin: auto;
+    display: grid; 
+    grid-template-columns: 50% 50%; 
+    grid-gap: 20px; 
 }
 
 .export-indiv-buttons {

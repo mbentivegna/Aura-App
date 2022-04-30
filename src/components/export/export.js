@@ -56,18 +56,16 @@ function Export() {
     <div className="export">
         <div className = "date-picker">
 
-          <h1 className = "title-date">Select Date Range</h1>
+          <h2 className = "title-date">Select Date Range</h2>
           <DateRange
             onChange={item => {setState([item.selection])}}
             moveRangeOnFirstSelection={false}
             ranges={state}
           />
+          <button className = "export-all-button" onClick={submit}>Export</button>
         </div>
         <div className = "list-visitors">
-            <div className = "grid-w-button">
-                <h1 className = "export-vis-title">Visitors to Export CSV</h1>
-                <button className = "export-all-button" onClick={submit}>Export All</button>
-            </div>
+                <h2 className = "export-vis-title">Visitors to Export CSV</h2>
         <div className = "list-styling">
           {visitors.map(({ id, username, visitorType }) => (
             <div key={id} className = "overall-card">
