@@ -39,7 +39,7 @@ function Return() {
             console.log(formData)
             setButtonDisabled(true)
 
-            fetch('http://localhost:8080/api/board/unassign?boardName=' + formData, {
+            fetch('http://ec2-18-215-164-108.compute-1.amazonaws.com:8080/api/board/unassign?boardName=' + formData, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
             })
