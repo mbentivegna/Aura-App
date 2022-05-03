@@ -35,15 +35,16 @@ export async function getCSV(string1, string2) {
     return res
 }
 
-export async function fetchCSV(string1, string2) {
-    const url = "http://ec2-18-215-164-108.compute-1.amazonaws.com:8080/api/visitor/csv?from=" + string1 + "&to=" + string2
+export async function fetchCSV(string1, string2, time1, time2) {
+    const url = "http://ec2-18-215-164-108.compute-1.amazonaws.com:8080/api/visitor/csv?from=" + string1 + "_" + time1 + "&to=" + string2 + "_" + time2
+    console.log(url)
     const method = "GET";
     fetch(url, 
         {
             method: 'GET',
         })
       .then((response) => {
-        response.blob().then(blob => download(blob, "test.csv"))
+        response.blob().then(blob => download(blob, "output.csv"))
           /*
         console.log("data", response)
         const url = window.URL.createObjectURL(new Blob([response.body]));

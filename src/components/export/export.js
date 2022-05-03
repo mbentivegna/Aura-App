@@ -5,6 +5,7 @@ import "react-date-range/dist/theme/default.css";
 import { useState, useEffect} from 'react'
 import { getVisitors, getCSV, fetchCSV} from "../APIUtils"
 import Moment from "moment"
+import TimePicker from 'react-time-picker';
 
 function Export() {
 
@@ -31,12 +32,16 @@ function Export() {
           }
       ])
 
+      const [startDateTime, setStartDateTime] = useState(["10:00:00"])
+      const [endDateTime, setEndDateTime] = useState(["12:00:00"])
+
+
     useEffect(() =>{
         getVisitors().then((data) => {setVisitors(data)})
         if(apiState.startString != '' && apiState.endString != '')
         {
             //Make post request for csv here
-            console.log(fetchCSV(apiState.startString, apiState.endString))
+            console.log(fetchCSV(apiState.startString, apiState.endString, startDateTime, endDateTime))
             console.log(apiState)
         }
         return visitors
@@ -62,6 +67,18 @@ function Export() {
             moveRangeOnFirstSelection={false}
             ranges={state}
           />
+          <div className = "overall-time-div">
+            <div className = "start-time-div">
+              <div className = "time-titles">Start Time:</div>
+              <TimePicker onChange = {setStartDateTime} maxDetail = "second" value = {startDateTime} format = "HH:mm:ss" className = "time-selector"/>
+            </div>
+            <div className = "end-time-div">
+              <div className = "time-titles">End Time:</div>
+              <TimePicker onChange = {setEndDateTime} maxDetail = "second" value = {endDateTime} format = "HH:mm:ss" className = "time-selector"/>
+            </div>
+            
+          </div>
+          
           <button className = "export-all-button" onClick={submit}>Export</button>
         </div>
         <div className = "list-visitors">
