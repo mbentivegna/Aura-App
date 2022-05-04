@@ -44,7 +44,7 @@ function Return() {
                 headers: { 'Content-Type': 'application/json' },
             })
             //******Make post request here******
-            await sleep(6);
+            await sleep(3);
             window.location.reload(false);
             
         }
