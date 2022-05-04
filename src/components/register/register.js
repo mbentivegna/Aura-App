@@ -66,7 +66,7 @@ function Register() {
 
             setButtonDisabled(true)
             //******Make post request here******
-            await sleep(3);
+            await sleep(2);
             window.location.reload(false);
             
         }
