@@ -57,7 +57,7 @@ function Register() {
         {
             toast.success("Successfully Registered Device! The Page will Reset Shortly.", {position: toast.POSITION.TOP_CENTER})
             console.log(formData)
-            fetch('http://ec2-18-215-164-108.compute-1.amazonaws.com:8080/api/board/assign', {
+            fetch('http://localhost:8080/api/board/assign', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)

@@ -1,7 +1,7 @@
 import HttpClient from "react-http-client"
 
 export async function getAvailableTags() {
-    const apiURL = "http://ec2-18-215-164-108.compute-1.amazonaws.com:8080/api/board/available"
+    const apiURL = "http://localhost:8080/api/board/available"
 
     const res = await fetch(apiURL);
     const data = await res.json();
@@ -10,7 +10,7 @@ export async function getAvailableTags() {
 }
 
 export async function getOccupiedTags() {
-    const apiURL = "http://ec2-18-215-164-108.compute-1.amazonaws.com:8080/api/board/occupied"
+    const apiURL = "http://localhost:8080/api/board/occupied"
 
     const res = await fetch(apiURL);
     const data = await res.json();
@@ -19,7 +19,7 @@ export async function getOccupiedTags() {
 }
 
 export async function getVisitors() {
-    const apiURL = "http://ec2-18-215-164-108.compute-1.amazonaws.com:8080/api/visitor"
+    const apiURL = "http://localhost:8080/api/visitor"
 
     const res = await fetch(apiURL);
     const data = await res.json();
@@ -28,7 +28,7 @@ export async function getVisitors() {
 }
 
 export async function getCSV(string1, string2) {
-    const apiURL = "http://ec2-18-215-164-108.compute-1.amazonaws.com:8080/api/visitor/csv?from=" + string1 + "&to=" + string2
+    const apiURL = "http://localhost:8080/api/visitor/csv?from=" + string1 + "&to=" + string2
 
     const res = await fetch(apiURL);
 
@@ -36,7 +36,7 @@ export async function getCSV(string1, string2) {
 }
 
 export async function fetchCSV(string1, string2, time1, time2) {
-    const url = "http://ec2-18-215-164-108.compute-1.amazonaws.com:8080/api/visitor/csv?from=" + string1 + "_" + time1 + "&to=" + string2 + "_" + time2
+    const url = "http://localhost:8080/api/visitor/csv?from=" + string1 + "_" + time1 + "&to=" + string2 + "_" + time2
     console.log(url)
     const method = "GET";
     fetch(url, 
